@@ -20,7 +20,7 @@
 
 import os
 import csv
-csvpath = os.path.join('..','Resources', 'pybank.csv')
+csvpath = os.path.join('pybank.csv')
 
 with open(csvpath, newline='') as csvfile:
 

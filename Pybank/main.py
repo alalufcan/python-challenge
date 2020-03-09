@@ -20,10 +20,21 @@
 
 import os
 import csv
-csvpath = os.path.join('pybank.csv')
+import datetime
+pybank_csv = os.path.join('pybank.csv')
 
-with open(csvpath, newline='') as csvfile:
+with open(pybank_csv, newline='') as csvfile:
 
-    csvreader = csv.reader(csvfile, delimiter=',')
+    pybank_csv = csv.reader(csvfile, delimiter=',')
 
-    print(csvreader)
+    print(pybank_csv)
+
+def number_of_months(pybank_csv):
+    dates = str(pybank_csv[0])
+    pl = int(pybank_csv[1])
+
+total_months = len(dates)
+
+print(total_months)
+
+

@@ -3,7 +3,7 @@
 # (Thankfully, your company has rather lax standards for accounting so the records are simple.)
 
 # Your task is to create a Python script that analyzes the records to calculate each of the following:
-# The total number of months included in the dataset
+# (check)The total number of months included in the dataset
 # The net total amount of "Profit/Losses" over the entire period
 # The average of the changes in "Profit/Losses" over the entire period
 # The greatest increase in profits (date and amount) over the entire period
@@ -24,12 +24,14 @@ import datetime
 pybank_csv = os.path.join('pybank.csv')
 
 num=[]
+total=0
+average_change = []
+greatest_increase = []
+greatest_decrease = []
+with open(pybank_csv, newline='') as csvfile:
 
-    with open(pybank_csv, newline='') as csvfile:
+    pybank_csv = csv.reader(csvfile, delimiter=',')
 
-        pybank_csv = csv.reader(csvfile, delimiter=',')
-
-        print(pybank_csv)
 
     def number_of_months(pybank_csv):
         dates = str(pybank_csv[0])
@@ -37,6 +39,20 @@ num=[]
     for i in pybank_csv:
         num.append(i)
         
- len(num)
+    print(len(num)-1)
+
+# profitandloss=0
+#     for i in pybank_csv[1]:
+#         profitandloss=profitandloss+i
+
+#     print(profitandloss)
+
+    for column in pybank_csv:
+        pl= pybank_csv[1]
+            for row in pl:
+                
+
+
+
 
 
